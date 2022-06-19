@@ -1,12 +1,18 @@
-import { View, Text, SafeAreaView, Image } from 'react-native'
+import { Image } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient'
-import React from 'react'
-import { height,width } from '../constants/Dimension'
+import React, { useEffect } from 'react'
+import { height, width } from '../constants/Dimension'
 import logo from '../assets/homescreen/logo.png'
 import topleft from '../assets/homescreen/topleft.png'
 import bottomright from '../assets/homescreen/bottomright.png'
 
-const Homescreen = () => {
+const SplashScreen = ({ navigation }) => {
+
+    useEffect(() => (
+        setTimeout(() => navigation.navigate('HomeScreen'), 2000)
+    ), [])
+
+
     console.log('height', width * 0.5);
     return (
         <LinearGradient colors={['#387FDA', '#2ECBAA']} style={{ height: height * 0.9999 }}>
@@ -28,4 +34,4 @@ const Homescreen = () => {
     )
 }
 
-export default Homescreen
+export default SplashScreen
