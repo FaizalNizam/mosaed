@@ -4,7 +4,14 @@ import LinearGradient from 'react-native-linear-gradient';
 
 const Buttons = ({ title, press, width, margintop }) => {
   return (
-    <Pressable onPress={press}>
+    <Pressable
+      onPress={press}
+      style={{
+        shadowColor: '#00BF77',
+        shadowOffset: { width: 0, height: 6 },
+        shadowRadius: 10,
+        shadowOpacity: 0.3, elevation: 3
+      }}>
       <LinearGradient
         colors={['#2ECBAA', '#387FDA']}
         start={{ x: 0, y: 0 }}
@@ -14,12 +21,9 @@ const Buttons = ({ title, press, width, margintop }) => {
           width: width,
           borderRadius: 30,
           justifyContent: 'center',
-          shadowColor: '#00BF77',
-          shadowOffset: { width: 1, height: 10 },
-          shadowOpacity: 1.5,
           alignItems: 'center',
           marginTop: margintop,
-          elevation:10
+
         }}>
         <Text style={{ color: '#FFFFFF', fontSize: 16 }}>{title}</Text>
       </LinearGradient>

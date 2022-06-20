@@ -13,6 +13,7 @@ import Profile from './src/component/Profile'
 import Contact from './src/component/Contact'
 import Saved from './src/component/Saved'
 import ServiceIntro from './src/component/ServiceIntro'
+import Round from './src/component/Round'
 
 
 const App = () => {
@@ -24,7 +25,7 @@ const App = () => {
 
       <stack.Navigator screenOptions={{ headerShown: false }}>
 
-        <stack.Screen name='splashscreen' component={SplashScreen} />
+        {/* <stack.Screen name='splashscreen' component={SplashScreen} /> */}
 
         {/* <stack.Screen name='HomeScreen'>
           {(props) => <Welcomescreen
@@ -63,6 +64,8 @@ const App = () => {
         {/* <stack.Screen name='contact' component={Contact} /> */}
 
         {/* <stack.Screen name='Services' component={ServiceIntro} /> */}
+
+        <stack.Screen name='splashscreen' component={Round} />
 
       </stack.Navigator >
 
